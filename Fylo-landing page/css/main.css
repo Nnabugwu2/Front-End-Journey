@@ -1,0 +1,292 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+.container{}
+/* ===================MAin Section============== */
+main{
+    width: 100%;
+    height: auto;
+}
+/* ===================Header=============== */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 30px 5% 15px 5%;
+    background-color: white;
+}
+/* ==========Logo============ */
+main header .logo{
+    margin-right: auto;
+}
+main header .logo img{
+    width :65%;
+    cursor: pointer;
+}
+/* ===========Mav Links=========== */
+main header nav{
+    margin: 0;
+    padding:0;
+    display: block;
+}
+main header nav ul{
+    list-style-type: none;
+}
+main header nav ul li{
+    display: inline;
+}
+main header nav ul li a{
+    text-decoration: none;
+    margin-left:4em;
+    color: hsl(0, 1%, 19%);
+    transition: 0.3s ease-in-out;
+}
+main header nav ul li a:hover{
+    color:hsl(170, 45%, 43%) ;
+}
+/* ===================Hamburger Menu============== */
+.toggle:hover{
+    cursor: pointer;
+    /* display: none; */
+}
+.toggle{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+}
+.toggle .hamburger, .hamburger::before, .hamburger::after{
+    display: block;
+    content: '';
+    width: 1.5em;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: hsl(0, 1%, 19%);
+    position: absolute;
+    cursor: pointer;
+
+}
+
+
+ .toggle .hamburger::before{
+    transform: translateY(-7px);
+} 
+.toggle .hamburger::after{
+    transform: translateY(7px);
+} 
+
+/* ======================Hero Section===================== */
+section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 3em 5%;
+    background-color: white;
+}
+.align{
+    margin-top: -3em;
+}
+.left{
+    width: 45%;
+}
+.left h1{
+    font-size: 190%;
+} 
+.left p{
+    margin-top: 1em;
+    font-size: 110%;
+    font-family:'Open Sans', sans-serif;;
+}
+.left form{
+    margin-top: 2em;
+}
+main section .left input{
+    width: 100%;
+}
+main section .left input[type=email]{
+    padding: .8em;
+    width: 50%;
+}
+main section .left input[type=button]{
+    padding: 1em;
+    width: 30%;
+    background-color: hsl(224, 93%, 58%);
+    color: white;
+    border: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+main section .left input[type=button]:hover{
+    background-color:hsl(170, 45%, 43%);
+}
+.right {
+    width: 55%;
+    background-color: white;
+}
+ .right img{
+    width :100%;
+}
+/* ================================== Second Section's testionial================ */
+.second-section 
+.left .works{
+    display: block;
+    margin-top: 1em;
+    color:hsl(170, 45%, 43%);   
+    text-decoration: none;
+}
+.works::after{
+    content: '';
+    display: block;
+    margin-top: .4em;
+    width: 30%;
+    height: 1px;
+    background-color:hsl(170, 45%, 43%) ;
+}
+.testimonial{
+    margin-top: 1.8em;
+    margin-left: 3.5em;
+}
+.testimonial p{
+    font-size: 100%
+}
+.testimonial .profile{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    justify-content: space-between;
+    width: 55%;
+}
+.profile img{
+    width: 20%;
+    border-radius: 50%;
+}
+.profile .name h4{
+    margin-bottom: .3em
+}
+.profile .name p{
+    margin-top: -.1px;
+}
+/* ========================Third Section==================== */
+.third-section{
+    background-color:hsl(238, 22%, 44%); 
+    padding: 5% 5%;
+    color: white;
+}
+.third-section .left{
+    padding-right: 3em;
+}
+.third-section .right{
+    background-color: transparent;
+    padding-left: 2.5em;
+}
+.third h1{
+    font-size: 110%;
+    color: white;
+}
+.third p{
+    font-size: 90%;
+}
+.third form{
+    display: flex;
+    flex-direction: column;
+}
+.third input[type=email]{
+    padding: .7em;
+    width: 80%;
+}
+.third-section .right button{
+    background-color: hsl(224, 93%, 58%);
+    padding: .5em;
+    margin-top: .3em;
+    width: 40%;
+    color: white;
+    border: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.third-section .right button:hover{
+    background-color:hsl(170, 45%, 43%);
+}
+/* =================Footer================== */
+footer{
+    width: 100%;
+    height: 50vh;
+    padding: 80px 5% 40px 5%;
+    justify-content: center;
+    align-self: center;
+    background-color:hsl(243, 87%, 12%);
+    color: white;
+
+    /* background-color: black; */
+}
+.log{
+    
+    margin-bottom: 1em;
+    width: 12%;
+}
+footer .box-container{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.box {
+    width: 25%;
+}   
+.pad{
+    padding-left: 6em;
+}
+.content{
+    display: flex;
+}
+footer .content{
+    margin-top: .6em;
+    display: flex;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+footer .content p{
+    margin-left: .5em;
+}
+footer  svg{
+    stroke: white;
+    fill: white;
+    cursor: pointer;
+}
+footer p, footer a{
+    font-size: 90%;
+    text-decoration: none;
+    color: white;
+    
+}
+.box ul{
+    list-style-type: none;
+}
+.box ul li{
+    margin-bottom:1em;
+}
+footer .pad{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer  .icons{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    margin-left: 4em;
+    
+}
+footer .icons svg:nth-child(even){
+    margin: 0 1em;
+}
+
