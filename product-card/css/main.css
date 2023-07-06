@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif; */
+     font-family: 'Fraunces', serif; 
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color:hsl(30, 38%, 92%);
+}
+main .card{
+    display:flex;
+    background-color: hsl(0, 0%, 100%);
+    max-width: 30em;
+    height: auto;
+    padding: 0;
+}
+main .card .desktop{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 49%;
+}
+.mobile{
+    display: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+}
+main .card .content{
+    padding: 19px 15px;
+    background-color: hsl(0, 0%, 100%);
+    width: 50%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8p  x;
+}
+main .card .content #p1{
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color:hsl(228, 12%, 48%) ;
+    font-family: 'Montserrat', sans-serif;
+}
+main .card .content h1{
+    font-size: 180%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-weight: 700;
+    line-height: .9;
+}
+main .card .content #p2{
+    font-size: 85%;
+    line-height: 1.4;
+    color:hsl(228, 12%, 48%) ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+main .card section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: .5em;
+}
+main .card section h1{
+    color: hsl(158, 36%, 37%);
+    font-family: 'Montserrat', serif;
+    font-weight: 700;
+   
+}
+main .card section del{
+    margin-right: 1.4em;
+    font-size: 90%;
+    color:hsl(228, 12%, 48%) ;
+}
+main button{
+    width: 100%;
+    background-color:  hsl(158, 36%, 37%);
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-top: .5em;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.3s ease-in-out;
+}
+main button svg{
+    width:7%;
+    margin-right: .3em;
+}
+main button:hover{
+    background-color: hsl(212, 21%, 14%);
+}
+
+/* ==================Media Query */
+
+@media (max-width:500px) {
+    main{
+        height: auto;
+    }
+    main .card .content h1{
+        font-size: 150%;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+     main .card{ 
+        flex-direction: column;
+        width: 100%;
+    }
+    main .card img{
+        width: 100%;
+        height: 50%;
+    }
+    main .card .content{
+        width: 100%;
+    }
+    #p1{
+        font-size: 120%;
+    }
+    main .card .content h1{
+        font-size: 200%;
+        /* font-weight: bold; */
+    }
+    main .card .content #p2{
+        font-size: 14px;
+    }
+}
+@media (max-width:375px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+     main .card{ 
+        flex-direction: column;
+        width: 100%;
+    }
+    main .card img{
+        width: 100%;
+        height: 50%;
+    }
+    main .card .content{
+        width: 100%;
+    }
+    #p1{
+        font-size: 120%;
+    }
+    main .card .content h1{
+        font-size: 200%;
+        /* font-weight: bold; */
+    }
+    main .card .content #p2{
+        font-size: 14px;
+    }
+}
+@media (max-width:235px) {
+    main .card .content section{
+       display: block;
+       margin-bottom: 1em;
+       margin-top: 1em;
+    }
+    main .card .content section h1{
+        font-size: 120%;
+        margin-bottom: -.1em;
+    }
+    main .card .content section del{
+        margin-top: -3em;
+    }
+}
+@media (max-width:185px){
+    main .card .content h1{
+        font-size: 110%;
+    }
+    main .card .content #p1{
+        font-size: 60%;
+}
