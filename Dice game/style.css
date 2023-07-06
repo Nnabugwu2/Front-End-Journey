@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(120, 71, 7, 0.9) ), url(./images/1113.png);
+    background-position:center;
+    background-size:cover;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.container{
+    display: flex;
+    width: 65%;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow:  2px 1px 40px #000;
+    justify-content: space-between;
+    padding: 2em;
+   
+}
+
+
+/* Left and right section styling */
+.container section {
+    /* background-color: aqua; */
+    border: 1px solid  rgb(120, 71, 7);
+    width: 35%;
+    text-align: center;
+    box-shadow: 2px 4px 10px rgb(120, 71, 7);
+    border-radius: 20px;
+ 
+}
+.container section .box1{
+    margin-top: 2.5em;
+}
+.container section .box1 h1{
+    font-size: 250%;
+    color: rgb(120, 71, 7);
+}
+.container section .box2{
+    margin-top: 1.5em;
+}
+.container section .box2 h1{
+    font-size: 350%;
+}
+.container section .box3{
+    margin-top: 3.5em;
+    background-color:  rgb(120, 71, 7);
+    width: 100%;
+    display: flex;
+    padding: 2em 0;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+.container section .box3 h4{
+    color: whitesmoke;
+    font-size: 110%;
+}
+.container section .box3 h3{
+    font-size: 150%;
+    color: whitesmoke;
+}
+
+
+/* Middle section styling */
+.container section:nth-child(even){
+    width: 25%;
+}
+
+.container section:nth-child(even) .box1{
+    margin-top: 4em;
+}
+.container section:nth-child(even) .box2 img{
+    margin-top: 1.9em;
+    width: 50%;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    /* visibility: hidden; */
+}
+.container section:nth-child(even) .box3{
+    margin-top: 2em;
+    transition: 0.3s ease-in-out;
+}
+.container section:nth-child(even) p{
+    color: rgb(120, 71, 7) ;
+    font-style: italic;
+    font-size: 90%;
+    margin-top: -2.5em;
+}
+
+button{
+    padding: .5em 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 4px 5px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color:  rgb(120, 71, 7);
+}
+.hidden-btn {
+    visibility: hidden;
+}
+#roll-dice-btn{
+    margin-bottom: .5em;
+}
+#new-game-btn{
+    background-color:  rgb(120, 71, 7);
+    color: wheat;
+    box-shadow: 2px 4px 5px rgb(0, 0, 0);
+    visibility: visible;
+}
+
+.active{
+    /* transform: translateY(-5px); */
+    transition: 0.3s ease-in-out;
+    background-color: rgb(204, 202, 200);
+}
+
+/* responsiveness */
+@media (max-width:1100px){
+    button{
+        font-size: 70%;
+    }
+}
+@media (max-width:950px){
+    button{
+        font-size: 60%;
+    }
+    .container section .box1 h1{
+        font-size: 150%;
+    }
+    .container section .box2 {
+        margin-top: 1em;
+        margin-bottom: -2em;
+    }
+    .container section:nth-child(even) .box2{
+        margin-bottom: 2em;
+    }
+}
+@media (max-width:750px){
+    body{
+        height: auto;
+        padding: 2em 0;
+    }
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+    .container section{
+        width: 100%;
+    }
+    .container section:nth-child(even){
+        width: 100%;
+        margin: 1em auto;
+    }
+    .container section:nth-child(even) .box3{
+        margin-bottom: 6em;
+    }
+}
+@media (max-width:1100px){
+    
+}
+@media (max-width:1100px){
+    
+}
+@media (max-width:1100px){
+    
+}

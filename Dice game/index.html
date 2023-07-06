@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nnabugwu Chimezie">
+    <meta name="description" content="A dice rolling game, and at the same time my Js beginner first project ">
+    <meta name="keywords" content="javascript, js-for-beginners, front-end, html, css, dice, game etc">
+
+        <!-- My website's Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+        <!-- My stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+        <!-- Site Titile -->
+    <title>Rolling-Dice Game</title>
+</head>
+<body>
+    <div class="container">
+        <section class="left active">
+            <div class="box1">
+                <h1 id="player-0">Player 1 </h1>
+           </div>
+          
+
+            <div class="box2">
+                <h1 id="cummulative-0">0</h1>
+            </div>
+
+            <div class="box3">
+                <h4>Score</h4>
+                <h3 id="score-0">0</h3>
+            </div>
+        </section>
+
+
+        <section class="centre">
+            <div class="box1">
+                <button id="new-game-btn">Start Game</button>
+            </div>
+
+            <div class="box2">
+                <img id="image" src="images/dice-0.png" alt="An image of a dice">
+            </div>
+
+            <div class="box3">
+               <div class="hidden-btn">
+                <button id="roll-dice-btn">Roll Dice</button>
+                <button id="hold-btn">Hold</button>
+               </div>
+            </div>
+            <p id="display-text"></p>
+        </section>
+       
+       
+        <section class="right">
+            <div class="box1">
+                <h1 id="player-1">Player 2</h1>
+            </div>
+
+            <div class="box2">
+                <h1 id="cummulative-1">0</h1>
+            </div>
+
+            <div class="box3">
+                <h4>Score</h4>
+                <h3 id="score-1">0</h3>
+            </div>
+        </section>
+    </div>
+
+    <!-- My js source file -->
+    <script src="app.js"></script>
+</body>
+</html>
