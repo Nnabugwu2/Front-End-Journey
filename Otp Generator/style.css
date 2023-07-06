@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left bottom, rgb(2, 167, 21), rgb(41, 21, 21));
+}
+.container .card{
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3em;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    box-shadow: -1px 1px 8px 7px rgba(0,0,0,0.75) inset;
+}
+.container .card h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 200%;
+    color: rgb(22, 68, 22);
+    text-shadow: 2px 2px 4px #000000;
+    /* margin-bottom: 1em; */
+}
+.container .card h1{
+    font-size: 350%;
+    transition: 0.5s ease-in-out;
+    margin-top: .2em;
+    font-weight: 100;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    text-shadow: 2px 2px 4px #000000;
+
+}
+/* .container .card h1::after{
+    display: block;
+    content: '';
+    width: 80%;
+    background: linear-gradient(to left bottom, rgb(2, 167, 21), rgb(41, 21, 21)) ;
+    height: 3px;
+    margin: auto;
+} */
+.container .card .con{
+    display: flex
+}
+.container .card .con button{
+    padding: .8em 2em;
+    background: linear-gradient(to left bottom, rgb(2, 167, 21), rgb(41, 21, 21)) ;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    margin-top: 1em;
+    box-shadow: 3px 7px 6px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+.container .card .con button:nth-child(even){
+    margin-left: .8em;
+    display: none;
+}
+.container .card .color{
+    margin-top: 1.5em;
+}
+
+.container .card .color p, .container .card p{
+    color: green;
+    margin-top: .5em;
+}
+input[type=color]{
+    background-color: yellow;
+    background: none;
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+    padding:.5em ;
+}
+#notify{
+    position: absolute;
+    color: white;
+    bottom: 22%;
+    background: linear-gradient(to left bottom, rgba(2, 167, 21,.8), rgb(41, 21, 21, .8));
+    padding: .6em 1em;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+    display: none;    
+}
+
+@media (max-width:950px){
+    .container .card{
+        width: 70%;
+        height: 70%;
+    }
+    .container .card h3{
+        margin-bottom: 1em;
+    }
+    #notify{
+        bottom: 22%;
+    }
+}
+@media (max-width:650px){
+    .container .card .con{
+        flex-direction: column;
+       
+    }
+    .container .card .con button{
+        width: 100%;
+       
+    }
+    .container .card .con button:nth-child(even){
+        margin: .8em 0 0 0;
+    }
+    #notify{
+        bottom: 19%;
+    }
+    
+}
+@media (max-width:500px){
+    .container .card{
+        width: 80%;
+        height: 80%;
+    }
+}
+@media (max-width: 390px){
+    .container .card h3{
+        font-size: 150%;
+    }
+    #notify{
+        bottom: 12%;
+    }
+}
