@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background: linear-gradient(45deg,  rgb(9, 5, 35),  rgba(22, 77, 94, 0.9));
+    --app: #a8c0ff;
+    --text-area: #fff;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    text-align: center;
+}
+
+.app{
+    background-color: var(--app);
+    max-width: 40em;
+    padding: 10%;
+    border-radius: 11px;
+    opacity: 0.8;
+    box-shadow: 1px 2px 25px 5px #000;
+}
+.text-area{
+    background-color:var(--text-area);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 3em 2em ;
+    width: 100%;
+    margin: 1em auto;
+    border-radius: 11px;
+    opacity: 0.8;
+    box-shadow: 1px 2px 3px 1px rgb(17, 15, 52);
+    border: 1.5px inset rgb(17, 15, 52) ;
+}
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+button{
+    width: 6rem;
+     padding: .5em 0;
+     background: var(--background);
+     color: white;
+     border-radius: 20px;
+     transition: 0.3s ease-in-out;
+     box-shadow: 1px 2px 2px 1px #000;
+
+}
+#buy-btn{
+    width: 100%;
+    display: block;
+    margin-bottom: 2em;
+}
+button:hover{
+    transform: translateY(-2px);
+}
+#notification{
+    width: auto;
+    height: auto;
+    background: var(--background);
+    padding: .7em 0;
+    margin: auto;
+    border-radius: 5px;
+    color: white;
+}
+@media (max-width:350px){
+    .container{
+        padding:  5% 10%;
+    }
+    .btn{
+        flex-direction: column;
+    }
+    button{
+        width: 100%;
+    }
+    #decrement-btn{
+        margin-top: 1em;
+    }
+    #buy-btn{
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 2em auto;
+    }
+    .container .app h1{
+        font-size: 150%;
+        margin-top: .5em;
+    }
+    .app{
+        padding-bottom: 1.5em;
+    }
+}
+
+@media (max-width:250px){
+   
+    
+    p#notify{
+        padding: 0 10%;
+        font-size: 80%;
+    }
+}
