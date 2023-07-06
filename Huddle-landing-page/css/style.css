@@ -1,0 +1,83 @@
+
+/* =======================Desktop query================ */
+@media (min-width:650px){
+    section h1, section p{
+        text-align: left;
+    }
+    section{
+        flex-direction: row;
+    }
+    .shadow{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+     .column-1{
+        width: 50%;
+    }
+     .column-2{
+        width: 50%;
+    }
+    .third-section{
+        flex-direction: row;
+    }
+    .text{
+        padding: 1em;
+    }
+    main section h1, main section p{
+        text-align: left;
+        justify-content: flex-start;
+    }
+    .column-1 .btn{
+        justify-content: flex-start;
+    }
+    section aside h1{
+        text-align: center;
+    }
+    footer .flex-items .item p{
+        font-size: 100%;
+}
+@media (min-width:850px){
+    main section{
+        align-items: center;
+    }
+    main section h1{
+        font-size: 190%;
+    } 
+    
+    main section .column-1 {
+        padding-right: 3em;
+        margin-top: -2em;
+    }
+    main section .column-1 p{
+       font-size: 110%;
+    }
+    button{
+        padding: 1em 3em;
+    }
+    section aside{
+        width: 70%;
+    }
+    footer .flex-items{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 1.6em;
+    }
+    .box{
+        width: 25%;
+    }
+    footer .p1{
+        text-align: right;
+    }
+    .align{
+        margin-left: 8.5em;
+    }
+    footer .flex-items ul li a{
+        transition: 0s ease-in-out;
+    }
+    footer .flex-items ul li a:hover{
+        text-decoration: underline;
+    }
+}
