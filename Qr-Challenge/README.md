@@ -1,4 +1,4 @@
-## QR Code Challenge
+# QR Code Challenge
 This is a QR code Challenge I solved from Front End Mentor.
 
-## Here is the live preview link 
+## Here is the live preview link : [https://nnabugwu2.github.io/Front-End-Journey/product-card/index.html](https://nnabugwu2.github.io/Front-End-Journey/Qr-Challenge/index.html)https://nnabugwu2.github.io/Front-End-Journey/Qr-Challenge/index.html
