@@ -192,6 +192,8 @@ window.addEventListener('load', function () {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.addEventListener("click", deleteEntry);
+    deleteBtn.classList.add("delete-btn");
+
 
     if (entry.operator === "-") {
       deleteBtn.classList.add("expense-delete");
