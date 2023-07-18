@@ -49,7 +49,7 @@ function resetPopUp() {
   email.style.display = "block";
 
   userId.value = userId.defaultValue;
- email.value = "";
+  email.value = "";
 }
 
 // Pop-up close button
@@ -85,13 +85,16 @@ function activeLink(event) {
 
     let third = document.querySelector(".third");
     third.classList.remove("active");
+
+    document.body.style.overflow = "auto"; // Reset body overflow to "auto"
   }
 }
 
 linksContainer.addEventListener("click", activeLink);
 
 document.querySelector(".toggle").addEventListener("click", function () {
-  document.body.style.overflow = "hidden";
+  document.body.style.overflow = "hidden"; // Set body overflow to "hidden"
+
   let navBar = document.querySelector(".nav-container");
   navBar.classList.toggle("nav-display");
 
@@ -105,22 +108,41 @@ document.querySelector(".toggle").addEventListener("click", function () {
   third.classList.toggle("active");
 });
 
+// Pop-up close button
+document.querySelector(".close").addEventListener("click", function () {
+  let popUp = document.querySelector(".pop-container");
+  let submitBtn = document.querySelector("#submit");
+  let userName = document.querySelector("#span");
+  let userId = document.querySelector("#username");
+  let email = document.querySelector("#email");
+
+  popUp.style.display = "none";
+  document.body.style.overflow = "auto"; // Reset body overflow to "auto"
+
+  userName.textContent = "Customer";
+  submitBtn.style.display = "block";
+  userId.style.display = "block";
+  email.style.display = "block";
+
+  userId.value = "";
+  email.value = "";
+});
 
 
 
 
 
 // Sticky header event handler 
-window.addEventListener('scroll', function(){
-let header = document.querySelector("header");
-let headerOffset = header.offsetTop;
+window.addEventListener('scroll', function () {
+  let header = document.querySelector("header");
+  let headerOffset = header.offsetTop;
 
-if(this.scrollY > headerOffset ){
+  if (this.scrollY > headerOffset) {
     header.classList.add("sticky");
-    header.style.boxShadow ="2px 1px 5px black"
-}else{
-        header.classList.remove("sticky");
-        header.style.boxShadow ="none";
-}
+    header.style.boxShadow = "2px 1px 5px black"
+  } else {
+    header.classList.remove("sticky");
+    header.style.boxShadow = "none";
+  }
 });
 
