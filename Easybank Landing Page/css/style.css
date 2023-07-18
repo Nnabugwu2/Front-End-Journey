@@ -299,6 +299,7 @@ section .flex-box aside p{
     right: 25%;
     z-index: 10000;
     animation: fadeIn 1s;
+    box-shadow: 1px 3px 10px var(--Bright-Cyan);
     /* bottom: 25%; */
 }
 @keyframes fadeIn{
@@ -436,6 +437,7 @@ footer section button{
         left: 15%;
         right: 15%;
         top: 15%;
+       
     }
 }
 @media (max-width: 900px){
