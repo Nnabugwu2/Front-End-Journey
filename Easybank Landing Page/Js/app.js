@@ -1,3 +1,13 @@
+// loading function
+let myLoad;
+function loadLoader() {
+  myLoad = setTimeout(load, 5000);
+}
+function load() {
+  document.querySelector(".load-con").style.display = "none";
+  document.querySelector(".body").style.display = "block";
+}
+
 // Toggle Menu Event handler
 let popUp = document.querySelector(".pop-container");
 let submitBtn = document.querySelector("#submit");
@@ -14,6 +24,14 @@ function popFunction() {
   email = document.querySelector("#email");
 
   submitBtn.addEventListener("click", function () {
+    let input = document.getElementById("username");
+    input.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        submitBtn.style.background = "black";
+      }
+    });
+
     if (userId.value !== "" && email.value !== "") {
       if (!validateEmail(email.value)) {
         document.querySelector("#notify").textContent =
@@ -41,13 +59,13 @@ function validateEmail(email) {
   return emailRegex.test(email);
 }
 
-
 function resetPopUp() {
   userName.textContent = "Customer";
   submitBtn.style.display = "block";
   userId.style.display = "block";
   email.style.display = "block";
-
+  document.querySelector("#notify").textContent =
+    "You are about to request for an Invite, kindly enter your email below to send a request";
   userId.value = userId.defaultValue;
   email.value = "";
 }
@@ -59,11 +77,23 @@ document.querySelector(".close").addEventListener("click", function () {
   resetPopUp();
 });
 
+document.querySelector(".toggle").addEventListener("click", function () {
+  // Set body overflow to "hidden"
+  // document.body.style.overflow = "hidden";
+  let navBar = document.querySelector(".nav-container");
+  navBar.classList.toggle("nav-display");
 
+  let first = document.querySelector(".first");
+  first.classList.toggle("active");
 
+  let second = document.querySelector(".second");
+  second.classList.toggle("active");
+
+  let third = document.querySelector(".third");
+  third.classList.toggle("active");
+});
 
 let linksContainer = document.querySelector("ul");
-
 function activeLink(event) {
   let clickedLink = event.target;
   if (clickedLink.classList.contains("li")) {
@@ -92,22 +122,6 @@ function activeLink(event) {
 
 linksContainer.addEventListener("click", activeLink);
 
-document.querySelector(".toggle").addEventListener("click", function () {
-  document.body.style.overflow = "hidden"; // Set body overflow to "hidden"
-
-  let navBar = document.querySelector(".nav-container");
-  navBar.classList.toggle("nav-display");
-
-  let first = document.querySelector(".first");
-  first.classList.toggle("active");
-
-  let second = document.querySelector(".second");
-  second.classList.toggle("active");
-
-  let third = document.querySelector(".third");
-  third.classList.toggle("active");
-});
-
 // Pop-up close button
 document.querySelector(".close").addEventListener("click", function () {
   let popUp = document.querySelector(".pop-container");
@@ -128,21 +142,16 @@ document.querySelector(".close").addEventListener("click", function () {
   email.value = "";
 });
 
-
-
-
-
-// Sticky header event handler 
-window.addEventListener('scroll', function () {
+// Sticky header event handler
+window.addEventListener("scroll", function () {
   let header = document.querySelector("header");
   let headerOffset = header.offsetTop;
 
   if (this.scrollY > headerOffset) {
     header.classList.add("sticky");
-    header.style.boxShadow = "2px 1px 5px black"
+    header.style.boxShadow = "2px 1px 5px black";
   } else {
     header.classList.remove("sticky");
     header.style.boxShadow = "none";
   }
 });
-
