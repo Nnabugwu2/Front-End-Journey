@@ -1,6 +1,6 @@
-let navLinks = document.querySelector("#nav");
-let form = document.querySelector(".form");
+let navLinks = document.querySelector("#nav");;
 let openIcon = document.querySelector(".toggle");
+let working = true;
 //Loader animation function================================================
 (function () {
         setTimeout(load, 5000);
@@ -23,15 +23,31 @@ window.addEventListener('scroll', function(){
 })
 // Toggle menu button======================================================================
 
-openIcon.addEventListener('click', function(){
-    navLinks.classList.toggle("nav-display");
-    document.body.style.overflow = "hidden";
-    console.log(navLinks)
-    document.querySelector(".close").addEventListener('click', function(){
-        navLinks.classList.remove("nav-display");  
+if(working){
+    openIcon.addEventListener('click', function(){
+        navLinks.classList.toggle("nav-display");
+        document.body.style.overflow = "hidden";
+    
+        openIcon = working;
+        console.log(working);
+        console.log(navLinks)
+        let closeIcon = document.querySelector(".close").addEventListener('click', closed);
+        navLinks.classList.remove("fadeout");
+
+        
+    })
+        return   working = false;
+
+}else{
+    function closed(){
+        navLinks.classList.remove("nav-display");
+        openIcon.style.display = "block";
         document.body.style.overflow = "auto";
-    });
-})
+        navLinks.classList.add("fadeout");
+        console.log(navLinks)
+    }
+}
+
 //Suscribers email functionality ====================================================
 document.querySelector("#subBtn").addEventListener('click', function(){
     let input = document.querySelector("#email");
@@ -83,15 +99,3 @@ function activeLink(event){
     } 
 }
 linkContainer.addEventListener("click", activeLink);
-// signUp form
-// document.querySelectorAll("button.reg").addEventListener('click', openForm)
-  function openForm() {
-    form.classList.add("display-form");
-    document.body.style.overflow = "hidden"
-    document.querySelector("#close-form").addEventListener('click', closeForm);
-  }
-function closeForm(){
-    form.classList.remove("display-form");
-    document.body.style.overflow = "auto";
-    console.log("Okay")
-}

@@ -1,0 +1,242 @@
+
+/* Responsiveness */
+@media (max-width:900px){
+  main header nav .close{
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-right: 3em;
+    cursor: pointer;
+  }
+  main header nav .close img{
+    width: 25px;
+    box-shadow: 2px 2px 2px var(--Bright-Red);
+    padding: .2em;
+    border-radius: 50%;
+    transition: .5s ease;
+  }
+    main header nav{
+      display: none;
+    }
+    
+    main header nav ul{
+      position:absolute ;
+      left: 0;
+      right: 0;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      z-index: 10000;
+      background-color: var(--Dark-Blue);
+      height: auto;
+      flex-direction: column;
+      padding: 5% 0;
+      transition: transform .3s;
+      animation: slide .5s linear;
+    }
+    main header nav ul li{
+      margin: 1em;
+      align-self: center;
+    }
+    main header nav ul li a{
+      color: white;
+    }
+    main header .toggle{
+      display: block;
+      box-shadow: var(--box-shadow);
+      padding: .2em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .hero .left .content h1{
+      font-size: 250%;
+    }
+    .hero .right{
+      margin-top: -2em;
+    }
+    .hero .right img{
+      margin: 0 -1.3em 0 0;
+    }
+    footer .box{
+      font-size: 90%;
+    }
+    footer input::placeholder{
+      padding-left: .9em;
+      font-size: 80%;
+    }
+    footer img{
+      width: 13%;
+    }
+    footer button {
+      padding: .8em;
+    }
+    form{
+      width: 90%;
+      height: auto;
+      left: 5%;
+      right: 5%;
+    }
+    form button{
+      padding: .5em .9em;
+      box-shadow: 1px 1px 3px black;
+    }
+  }
+ 
+  @media (max-width:800px){
+    .hero .left .content h1{
+      font-size: 200%;
+    }
+    
+   
+  }
+  
+  @media (max-width:750px){
+    main{
+      height: auto;
+    }
+   
+    .hero{
+      flex-direction: column-reverse;
+      height: auto;
+      padding: 3em 8%;
+    }
+    .hero .section{
+      width: 100%;
+      text-align: center;
+    }
+    .hero .left{
+      margin-bottom: 2.5em;
+    }
+    .section-two h1{
+      text-align: center;
+    }
+    .section-two .first{
+      padding-right: 0;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .section-two section aside{
+      box-shadow: var(--box-shadow);
+      margin: 1.5em 0;
+      padding: 2em 1em;
+      border-radius: 20px;
+    }
+    .section-two section aside .num h4{
+      box-shadow: var(--box-shadow);
+    }
+    .third-section .card-container{
+      flex-direction: column;
+    }
+    .third-section .card-container .card{
+      width: 100%;
+      margin-bottom: 2em;
+      box-shadow: var(--box-shadow);
+      padding: 4em 2em;
+      border-radius: 25px;
+    }
+    .third-section .card-container .card img{
+      box-shadow: var(--box-shadow);
+      border-radius: 50%;
+      padding: .2em;
+      width: 30%;
+    }
+    
+    .third-section .card-container .card h5{
+      margin: 1em;
+    }
+    .third-section .btn{
+      margin-top: -1em;
+      margin-bottom: 2em;
+    }
+    .fourth-section h1{
+      font-size: 150%;
+    }
+    footer{
+      flex-direction: column;
+    }
+    footer .box{
+      width: 100%;
+      text-align: center;
+    }
+    footer img{
+      width: 10%;
+    }
+    footer ul{
+      margin: 1.5em 0 2em 0;
+    }
+    footer input{
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    footer button{
+      width: 100%;
+      
+    }
+    footer input::placeholder{
+      font-size: 100%;
+    }
+
+      
+    }
+    @media (max-width:650px){
+      .section-two{
+        flex-direction: column;
+      }
+      .hero{
+        padding: 0 8%;
+      }
+     
+    }
+    @media (max-width:550px){
+      main header button{
+        display: none;
+      }
+      .hero{
+        padding-top: 3em;
+      }
+      #linkBtn{
+        display: block;
+        width: 40%;
+        margin: 1em auto;
+      }
+      
+    }
+    @media (max-width:400px){
+      .fourth-section button{
+        padding: .5em 1em;
+      }
+
+    }
+    /* Bigger Screen */
+  @media (min-width:2000px){
+    :root{
+      font-size: 150%;
+    }
+    p, a{
+      font-size: 130%;
+    }
+    .hero .left .content{
+      transform: translateY(50%);
+    }
+    main header{
+      padding: 50px 12%;
+    }
+    
+    .hero{
+      padding: 5em 12% 0 12%;
+    }
+    .section-two{
+      padding: 20px 12%;
+    }
+    .third-section{
+      padding: 5% 12%;
+    }
+    .fourth-section{
+      padding: 8% 12%;
+    }
+    footer{
+      padding: 50px 12%;
+    }
+  }
+
+  /* Mobile menu */

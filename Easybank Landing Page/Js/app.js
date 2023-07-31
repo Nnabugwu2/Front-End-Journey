@@ -155,3 +155,11 @@ window.addEventListener("scroll", function () {
     header.style.boxShadow = "none";
   }
 });
+// signUp form
+document.querySelector("#reg").addEventListener('click', function(){
+  let form = document.querySelector(".form");
+
+  form.classList.toggle("display-form");
+  console.log(form)
+
+})

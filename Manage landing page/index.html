@@ -12,6 +12,8 @@
 
     <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
     <!-- favicom -->
     <link
       rel="shortcut icon"
@@ -45,23 +47,27 @@
           </div>
 
           <!-- navbar -->
-          <nav>
-            <ul>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Product</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Career</a></li>
-              <li><a href="#">Community</a></li>
+          <nav id="nav">
+            <ul id="ul">
+              <div class="close">
+                <img id="close-toggle" src="images/icon-close.svg" alt="">
+              </div>
+              <li><a href="#" class="active-link li">Home</a></li>
+              <li><a class="li" href="#">Product</a></li>
+              <li><a class="li" href="#">About Us</a></li>
+              <li><a class="li" href="#">Career</a></li>
+              <li><a class="li" href="#">Community</a></li>
+              <button id="linkBtn" onclick="openForm()">Sign Up</button>
             </ul>
           </nav>
 
           <!-- Get Started Btn -->
           <div class="btn">
-            <button>Get Started</button>
+            <button onclick="openForm()">Sign Up</button>
           </div>
 
           <div class="toggle">
-            <img src="images/icon-hamburger.svg" alt="">
+            <img  id="toggle-img" src="images/icon-hamburger.svg" alt="">
           </div>
         </header>
 
@@ -74,7 +80,7 @@
               Manage makes it simple for software teams to plan day-to-day tasks
               keeping larger team goals in view.
             </p>
-            <button>Get started</button>
+            <button onclick="openForm()">Get started</button>
            </div>
           </div>
 
@@ -187,7 +193,7 @@
         </div>
 
         <div class="btn">
-          <button>Get Started</button>
+          <button onclick="openForm()">Get Started</button>
         </div>
       </div>
 
@@ -199,7 +205,7 @@
 
         <div class="box">
           <div class="btn">
-            <button>Get Started</button>
+            <button onclick="openForm()">Get Started</button>
           </div>
         </div>
       </div>
@@ -261,14 +267,55 @@
 
         <div class="box">
           <div class="input">
-            <input type="email" name="email" id="email" placeholder="Updates in your email"/>
-            <button>Go</button>
+            <input type="email" name="email" id="email" placeholder="Updates in your email" autocomplete="on"/>
+            <button id="subBtn">Go</button>
           </div>
 
           <p>&copy Nnabugwu Chimezie | All Rights reserved.</p>
         </div>
       </footer>
     </div>
+    <!-- email notification -->
+    <div class="email-popUp">
+      <div class="email-update">
+        <h1>Dear <span id="username">Customer</span></h1>
+        <p id="update-content">You'll receive no email shortly...lol!</p>
+      </div>
+    </div>
+
+    <!-- Forms -->
+  <div class="form">
+    <form action="" class="signUp">
+      <div class="close">
+        <img id="close-form" src="images/icon-close.svg" alt="">
+      </div>
+      <h1>Create an Account</h1>
+      <input type="text" name="FullName" id="name" placeholder="Enter your fullname" required>
+      <input type="email" name="email" id="email2" placeholder="Enter your email" required>
+      <input type="password" name="pswd" id="pswd1" placeholder="Enter a password" required>
+      <input type="password" name="pswd" id="pswd" placeholder="Confirm your password" required>
+      <div class="show">
+        <input type="checkbox" name="pswdCheck" id="chck"><p>Show password</p>
+      </div>
+      <button>Submit</button>
+      <div class="signIn">
+        <p>Have an account? <a href="#">Sign In</a></p>
+      </div>
+    </form>
+  </div>
+
+    <!-- <form action="" class="logIn">
+      <div class="closeForm">
+        <img id="close-toggle" src="images/icon-close.svg" alt="">
+      </div>
+      <h3>Sign In to your Account</h3>
+      <input type="email" name="email" id="email2" placeholder="Enter your email" required>
+      <input type="password" name="pswd" id="pswd1" placeholder="Enter a password" required>
+      <button type="submit">Sign In</button>
+      <div class="signIn">
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+      </div>
+    </form> -->
 
     <!-- Javascript File -->
     <script src="Js/app.js"></script>
